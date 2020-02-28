@@ -16,6 +16,12 @@ const Navigation = () => {
             <Link to='/characters'>
                 Characters
             </Link>
+            <Link to='/locations'>
+                Locations
+            </Link>
+            <Link to='/episodes'>
+                Episodes
+            </Link>
         </Links>
     );
 };
