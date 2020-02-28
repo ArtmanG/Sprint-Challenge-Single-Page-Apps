@@ -9,8 +9,8 @@ function CharacterList() {
     Axios
       .get('https://cors-anywhere.herokuapp.com/https://rickandmortyapi.com/api/character/')
       .then(response => {
-        console.log(response.results);
-        setCharacters(response.results);
+        console.log(response.data.results);
+        setCharacters(response.data.results);
       })
       .catch(error => {
         console.log('Error:', error);
@@ -36,4 +36,4 @@ function CharacterList() {
   );
 }
 
-export default CharacterList
+export default CharacterList;
