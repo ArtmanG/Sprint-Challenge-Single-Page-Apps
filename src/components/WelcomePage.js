@@ -1,5 +1,4 @@
 import React from 'react';
-import SearchForm from './SearchForm';
 
 export default function WelcomePage() {
   return (
@@ -12,7 +11,6 @@ export default function WelcomePage() {
           alt='rick'
         />
       </header>
-      <SearchForm />
     </section>
   );
 }

@@ -11,7 +11,6 @@ function CharacterList() {
     Axios
       .get('https://cors-anywhere.herokuapp.com/https://rickandmortyapi.com/api/character/')
       .then(response => {
-        console.log(response.data.results);
         setCharacters(response.data.results);
       })
       .catch(error => {
