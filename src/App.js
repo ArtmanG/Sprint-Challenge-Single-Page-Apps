@@ -1,24 +1,31 @@
 import React from 'react';
-import { Route } from 'react-router-dom'
+import { Route } from 'react-router-dom';
+import styled from 'styled-components';
 
 import Header from './components/Header.js';
 import WelcomePage from './components/WelcomePage';
 import CharacterList from './components/CharacterList';
 import Navigation from './components/Navigation.js';
 
+const Body = styled.div`
+margin: 0 auto;
+`;
+
 
 function App() {
   return (
     <main>
-      <Header />
-      <Navigation />
-      <Route exact path='/' >
-        <WelcomePage />
-      </Route>
+      <Body>
+        <Header />
+        <Navigation />
+        <Route exact path='/' >
+          <WelcomePage />
+        </Route>
 
-      <Route path='/characters' >
-        <CharacterList />
-      </Route>
+        <Route path='/characters' >
+          <CharacterList />
+        </Route>
+      </Body>
     </main>
   );
 }
