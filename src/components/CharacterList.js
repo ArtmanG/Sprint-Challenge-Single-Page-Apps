@@ -1,6 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
 import Axios from 'axios';
-import CharacterCard from './CharacterCard'
+
+import CharacterCard from './CharacterCard';
+import SearchForm from './SearchForm';
 
 function CharacterList() {
   const [characters, setCharacters] = useState([]);
@@ -15,22 +17,24 @@ function CharacterList() {
       .catch(error => {
         console.log('Error:', error);
       });
+
     // TODO: Add API Request here - must run in `useEffect`
     //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
   }, []);
 
   return (
-    <section className="character-list">
+    <section className='character-list'>
+    <SearchForm />
       {characters.map((character, index) => {
-        return (
-          <CharacterCard
-            key={index}
-            name={character.name}
-            status={character.status}
-            species={character.species}
-            gender={character.gender}
-          />
-        );
+          return (
+            <CharacterCard
+              key={index}
+              name={character.name}
+              status={character.status}
+              species={character.species}
+              gender={character.gender}
+            />
+          );
       })};
     </section>
   );
