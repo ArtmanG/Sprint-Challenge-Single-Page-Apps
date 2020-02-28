@@ -4,7 +4,7 @@ import React from 'react';
 //   return <span>todo: character</span>;
 // }
 
-const CharacterCard = props => {
+const EpisodeCard = props => {
   return (
     <span>
       <div key={props.id}>
@@ -17,4 +17,4 @@ const CharacterCard = props => {
   )
 }
 
-export default CharacterCard;
+export default EpisodeCard;

@@ -2,14 +2,14 @@ import React, { useEffect, useState } from 'react';
 import Axios from 'axios';
 import styled from 'styled-components';
 
-import CharacterCard from './CharacterCard';
+import EpisodeCard from './EpisodeCard';
 import SearchForm from './SearchForm';
 
 const Body = styled.div`
 margin: 0 auto;
 `;
 
-function CharacterList() {
+function EpisodeList() {
   const [characters, setCharacters] = useState([]);
 
   useEffect(() => {
@@ -32,7 +32,7 @@ function CharacterList() {
         <SearchForm />
           {characters.map((character, index) => {
               return (
-                <CharacterCard
+                <EpisodeCard
                   key={index}
                   name={character.name}
                   status={character.status}
@@ -46,4 +46,4 @@ function CharacterList() {
   );
 }
 
-export default CharacterList;
+export default EpisodeList;
